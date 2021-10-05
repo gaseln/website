@@ -44,7 +44,9 @@
               <heading style="color: blue;">News</heading>
               <p>
                 <ul>
-                    <li> Out paper <a href="http://proceedings.mlr.press/v119/malinovskiy20a/malinovskiy20a.pdf"> "From Local SGD to Local Fixed-Point Methods for Federated Learning"</a> got accepted to ICML 2020.</li>
+                    <li> Our paper <a href="https://fl-icml.github.io/2021/papers/FL-ICML21_paper_46.pdf">"Lower Bounds and Optimal Algorithms for Smooth and Strongly Convex Decentralized Optimization Over Time-Varying Networks"</a> got accepted to <a href="https://nips.cc">NeurIPS 2021</a>!</li>
+                    <li> Our paper <a href="https://fl-icml.github.io/2021/papers/FL-ICML21_paper_38.pdf">"FedMix: A Simple and Communication-Efficient Alternative to Local Methods in Federated Learning"</a> got accepted to <a href="http://federated-learning.org/fl-icml-2021/">FL-ICML'21</a> workshop!</li>
+                    <li> Our paper <a href="http://proceedings.mlr.press/v119/malinovskiy20a/malinovskiy20a.pdf"> "From Local SGD to Local Fixed-Point Methods for Federated Learning"</a> got accepted to ICML 2020.</li>
                     <li> In December 2019, I completed my MS! </li>
                     <li> In July 2019, I graduated from <a href="https://www.udacity.com/course/deep-learning-nanodegree--nd101"> Udacity Deep Learning Nanodegree</a>.</li>
                     <li> In June 2019, I was at <a href="https://www.ds3-datascience-polytechnique.fr">Data Science Summer School</a> and presented our poster "A New Randomized Method for Solving Large Linear Systems" </li>
@@ -63,6 +65,7 @@
                 <heading style="color: blue;">Talks and poster presentations</heading>
                 <p>
                 <ul>
+                    <li> In July 2021, at <a href="https://cs.hse.ru/hdilab/opti/"> "Optimization without Borders" </a> conference, I presented our poster "FedMix: A Simple and Communication-Efficient Alternative to Local Methods in Federated Learning" (<a href="data/fedmix_poster.pdf">poster</a>, <a href="images/photo_sirius.jpeg">photo</a>) </li>
                     <li> In November 2019, at KAUST-Tsinghua-Industry workshop, I presented a poster, based on our NeurIPS 2018 paper(<a href="data/sscd_poster.pdf">poster here</a>).</li>
                     <li> In June 2019, at <a href="https://www.ds3-datascience-polytechnique.fr"> DS3</a>, I presented our poster "A New Randomized Method for Solving Large Linear Systems".</li>
                     <li> In June 2019, at <a href="http://www-ljk.imag.fr/index_en.html"> LJK</a>, I gave a talk on our new asynchronous delay-tolerant distributed algorithm.</li>
@@ -79,10 +82,24 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
                 <heading style="color: blue;">Publications</heading><br><br>
                 <div>
+                <a href="https://fl-icml.github.io/2021/papers/FL-ICML21_paper_38.pdf"><papertitle>FedMix: A Simple and Communication-Efficient Alternative to Local Methods in Federated Learning</papertitle></a><br>
+                Federated Learning (FL) is an increasingly popular machine learning paradigm in which multiple nodes try to collaboratively learn under privacy, communication and multiple heterogeneity constraints. A persistent problem in federated learn- ing is that it is not clear what the optimization objective should be: the standard average risk minimization of supervised learning is inadequate in handling several major constraints specific to federated learning, such as communication adaptivity and personalization control. We identify several key desiderata in frameworks for federated learning and introduce a new framework, FedMix, that takes into account the unique challenges brought by federated learning. FedMix has a standard finite-sum form, which enables practitioners to tap into the immense wealth of existing (potentially non-local) methods for distributed optimization. Through a smart initialization that does not require any communication, FedMix does not re- quire the use of local steps but is still provably capable of performing dissimilarity regularization on par with local methods. We give several algorithms for solving the FedMix formulation efficiently under communication constraints. Finally, we corroborate our theoretical results with extensive experimentation.<br>
+                Elnur Gasanov, <a href="https://rka97.github.io">Ahmed Khaled</a>, <a href="https://samuelhorvath.github.io">Samuel Horv&aacuteth</a>, <a href="https://richtarik.org/index.html">Peter Richt&aacuterik</a><br>
+                <a href="http://federated-learning.org/fl-icml-2021/"> FL-ICML'21 (workshop)</a>
+                </div><br>
+
+                <div>
+                <a href="https://fl-icml.github.io/2021/papers/FL-ICML21_paper_46.pdf"> <papertitle>Lower Bounds and Optimal Algorithms for Smooth and Strongly Convex Decentralized Optimization over Time-Varying Networks</papertitle></a><br>
+                We consider the task of minimizing the sum of smooth and strongly convex functions stored in a decentralized manner across the nodes of a communication network whose links are allowed to change in time. We solve two fundamental problems for this task. First, we establish the first lower bounds on the number of decentralized communication rounds and the number of local computations required to find an ε-accurate solution. Second, we design two optimal algorithms that attain these lower bounds: (i) a variant of the recently proposed algorithm ADOM (Kovalev et al., 2021) enhanced via a multi-consensus subroutine, which is optimal in the case when access to the dual gradients is assumed, and (ii) a novel algorithm, called ADOM+, which is optimal in the case when access to the primal gradients is assumed. We corroborate the theoretical efficiency of these algorithms by performing an experimental comparison with existing state-of-the-art methods.<br>
+                <a href="https://dmitry-kovalev.com">Dmitry Kovalev</a>, Elnur Gasanov, <a href="https://richtarik.org/index.html">Peter Richt&aacuterik</a>, <a href="https://www.hse.ru/en/org/persons/49503846"> Alexander Gasnikov</a><br>
+                <a href="https://nips.cc">NeurIPS 2021</a>
+                </div><br>
+
+                <div>
                 <a href="https://arxiv.org/abs/2004.01442"> <papertitle>From Local SGD to Local Fixed-Point Methods for Federated Learning</papertitle></a><br>
                 Most algorithms for solving optimization problems or finding saddle points of convex-concave functions are fixed-point algorithms. In this work we consider the generic problem of finding a fixed point of an average of operators, or an approximation thereof, in a distributed setting. Our work is motivated by the needs of federated learning. In this context, each local operator models the computations done locally on a mobile device. We investigate two strategies to achieve such a consensus: one based on a fixed number of local steps, and the other based on randomized computations. In both cases, the goal is to limit communication of the locally-computed variables, which is often the bottleneck in distributed frameworks. We perform convergence analysis of both methods and conduct a number of experiments highlighting the benefits of our approach. <br>
                 <a href="https://cemse.kaust.edu.sa/amcs/people/person/grigory-malinovsky">Grigory Malinovsky</a>, <a href="https://dmitry-kovalev.com">Dmitry Kovalev</a>, Elnur Gasanov, <a href="https://lcondat.github.io">Laurent Condat</a>,  <a href="https://richtarik.org/index.html">Peter Richt&aacuterik</a><br>
-                <a href="https://icml.cc">ICML 2020</a>
+                <a href="http://proceedings.mlr.press/v119/malinovskiy20a/malinovskiy20a.pdf">ICML 2020</a>
                 </div><br>
             
                 <div>
